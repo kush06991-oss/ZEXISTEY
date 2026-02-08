@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ZEXISTEY BOT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --primary:#22e6c8;
+  --secondary:#6ff7ff;
+  --bg:#06090c;
+  --panel:#0c1318;
+  --text:#d6dde1;
+  --muted:#8a9aa5;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  min-height:100vh;
+  background:radial-gradient(1000px 500px at top, #0b1e22, var(--bg));
+  font-family:Inter,Segoe UI,system-ui,sans-serif;
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* container */
+.wrapper{
+  width:92%;
+  max-width:420px;
+  background:linear-gradient(180deg,#111b21,#0a1014);
+  border-radius:18px;
+  padding:40px 36px;
+  box-shadow:0 25px 70px rgba(0,0,0,.65);
+}
+
+/* brand */
+.brand{
+  text-align:center;
+  font-size:40px;
+  font-weight:800;
+  letter-spacing:3px;
+  color:#fff;
+}
+.brand span{color:var(--primary)}
+
+.subtitle{
+  text-align:center;
+  margin-top:8px;
+  font-size:14px;
+  color:var(--muted);
+}
+
+/* form */
+.form{
+  margin-top:30px;
+}
+
+.input-group{
+  margin-bottom:16px;
+}
+.input-group label{
+  font-size:13px;
+  color:var(--muted);
+}
+.input-group input{
+  width:100%;
+  margin-top:6px;
+  padding:14px 14px;
+  border-radius:10px;
+  background:#0f181e;
+  border:1px solid rgba(255,255,255,.08);
+  color:var(--text);
+  font-size:14px;
+}
+.input-group input:focus{
+  outline:none;
+  border-color:var(--primary);
+}
+
+/* button */
+.btn{
+  width:100%;
+  margin-top:10px;
+  padding:15px;
+  font-size:16px;
+  font-weight:600;
+  color:#041417;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  border:none;
+  border-radius:50px;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(34,230,200,.35);
+}
+.btn:hover{
+  box-shadow:0 18px 45px rgba(34,230,200,.5);
+}
+
+/* footer */
+.footer{
+  margin-top:28px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.06);
+  padding-top:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <div class="brand">
+    ZEXISTEY <span>BOT</span>
+  </div>
+
+  <div class="subtitle">
+    Powering Smarter Free Fire Automation
+  </div>
+
+  <!-- PASSWORD ONLY -->
+  <form class="form" onsubmit="return checkPassword()">
+    <div class="input-group">
+      <label>Enter Password</label>
+      <input type="password" id="password" placeholder="••••••••" required>
+    </div>
+
+    <button class="btn" type="submit">Login</button>
+  </form>
+
+  <div class="footer">
+    © 2026 ZEXISTEY BOT. All rights reserved.<br>
+    affiliated with Garena.
+  </div>
+
+</div>
+
+<script>
+function checkPassword(){
+  const pass = document.getElementById("password").value;
+
+  if(pass === "ZEXISTEY 1982"){
+    window.location.href = "dashboard.html";
+  }else{
+    alert("❌ Wrong Password");
+  }
+  return false;
+}
+</script>
+
+</body>
+</html>
